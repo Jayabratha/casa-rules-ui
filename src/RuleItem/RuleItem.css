@@ -1,0 +1,14 @@
+.rule-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.rule-item>* {
+    width: 33%;
+    margin: 5px;
+}
+
+#param {
+    text-transform: capitalize;
+}

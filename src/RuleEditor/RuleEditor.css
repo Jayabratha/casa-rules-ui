@@ -1,0 +1,18 @@
+.main-editor {
+    display: flex;
+    padding: 20px 0;
+}
+
+.editor {
+    width: 100%;
+    max-width: 500px;
+}
+
+.preview {
+    width: 100%;
+    max-width: 600px;
+}
+
+.rule-list {
+    padding: 20px 0;
+}

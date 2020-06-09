@@ -1,9 +1,12 @@
 .App {
-  text-align: center;
+  --color-primary: #50a2f4;
+  --color-primary-dark: #107ce8;
+  --color-white: #ffffff;
+  --color-label: #868686;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50px;
   pointer-events: none;
 }
 
@@ -15,7 +18,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +38,132 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h2, h3, h4 {
+  color: #868686;
+}
+
+main {
+  padding: 20px 5%;
+}
+
+/* Button Styles - Start */
+
+button {
+  position: relative;
+  border: none;
+  width: auto;
+  border-radius: 5px;
+  padding: 0 3em;
+  margin: 0rem;
+  font-family: inherit;
+  font-size: 1em;
+  transition: all 0.4s;
+  height: 3rem;
+  color: var(--color-white);
+  box-shadow: inset 0px 0px 0px 0px var(--color-primary);
+  background-color: var(--color-primary);
+  cursor: pointer;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: transparent;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button:not([disabled]):not(.link):hover, button:not([disabled]):not(.link):focus {
+  background-color: var(--color-primary-dark);
+  box-shadow: inset 0px 0px 0px 3px var(--color-primary);
+}
+
+button:not([disabled]):not(.link):active {
+  box-shadow: inset 0px 0px 20px 10px var(--color-primary);
+}
+
+button.link {
+  padding: 0;
+  margin: 0 0.5rem;
+  background: transparent;
+  color: var(--color-primary);
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  height: 1rem;
+}
+
+button.link:not([disabled])::after {
+  content: "";
+  background: var(--color-primary);
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  height: 1px;
+  bottom: 0;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+button.link:not([disabled]):hover::after, button.link:not([disabled]):focus::after {
+  width: 100%;
+}
+
+button.full-width {
+  width: 100%;
+  margin: 0;
+}
+
+/* Button Styles - End */
+
+.card {
+  padding: 15px;
+  border: thin solid #ececec;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.msg {
+  padding: 20px;
+}
+
+/* Form Style */
+
+label {
+  display: block;
+  font-size: 12px;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-label);
+}
+
+input[type='text'], select {
+  outline: none;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  height: 3rem;
+  font-size: 1rem;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  background-color: #f6f6f6;
+  transition: all 0.4s;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+input[type='text']:focus,
+input[type='text']:active {
+  background-color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+input.full-width,
+select.full-width {
+  width: 100%;
+  max-width: 100%;
 }
